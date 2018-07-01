@@ -1,0 +1,16 @@
+.container{
+    display: flex;
+   /*flex-direction: column-reverse;*/
+   flex-wrap: wrap-reverse;
+   justify-content: space-evenly;
+}
+.item{
+    background-color: blue;
+    margin: 20px;
+    height: 60px;
+    width: 60px;
+    padding: 10px;
+    font-size: 30px;
+    flex-grow: 1;
+
+}
