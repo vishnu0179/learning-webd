@@ -49,3 +49,33 @@ let x= f1();
 // let p=x();  this makes the function f2 executed
 
 
+
+function score(initialVal,delta){
+
+    let val = initialVal
+    let totalScore={
+        incr: function(){
+            val+=delta
+        },
+        decr: function(){
+            val-=delta
+        },
+        show: function(){
+            console.log(val)
+        }
+
+        
+    }
+    return totalScore;
+}
+
+let k= score(10,20)
+k.show()
+k.incr()
+k.incr()
+k.decr()
+k.show()
+
+console.log(typeof k)
+console.log(typeof k.show)
+console.log(typeof k.show())
