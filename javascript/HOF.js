@@ -35,3 +35,17 @@ console.log(count1());
 console.log(count2());
 console.log(count2());
 console.log(count2());
+
+
+function f1()
+{
+    function f2(){        // f2 is never executed because it is never called
+        return 5;
+    }
+}
+
+let x= f1();
+
+// let p=x();  this makes the function f2 executed
+
+
