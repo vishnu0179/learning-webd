@@ -60,7 +60,7 @@ downloadFile("http://cb.lk/image.png")
     .then(resizeFile)
     .then(uploadFile)
     .then(function(file){
-        console.log("Your file has been uploaded to" + file)
+        console.log("Your file has been uploaded to " + file)
     })
     .catch(function(err){
         console.error(err);
