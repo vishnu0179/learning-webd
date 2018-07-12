@@ -13,6 +13,7 @@ route.post('/',(req, res)=>{
         todo: req.body.todo,
         done: req.body.done
     })
+    res.send(todolist)
 })
 route.get('/:id',(req,res)=>{
     res.send(todolist[req.params.id])
@@ -22,8 +23,10 @@ route.patch('/:id',(req , res)=>{
         todo:req.body.todo,
         done: req.body.done
     }
+    res.send(todolist)
 })
 route.delete('/:id',(req, res)=>{
     delete todolist[req.params.id]
+    res.send(todolist)
 })
 module.exports=route
