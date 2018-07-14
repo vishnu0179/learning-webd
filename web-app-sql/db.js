@@ -1,11 +1,11 @@
 const mysql = require('mysql2')
 
-const connection = {
+const connection = mysql.createConnection({
     host: 'localhost',
     database: 'mytestdb',
     user: 'root',
     password: 'ganesha2'
-}
+})
 
 function getAllPersons(){
     
@@ -39,7 +39,25 @@ function addNewPersons(name,age ,city){
     })
 }
 
+/* function deletePersons(id){
+    return new Promise(function(resolve,reject){
+        connection.query(
+            `DELETE FROM persons WHERE id = ?;
+            ALTER TABLE persons AUTO_INCREMENT = 1;`,
+            [id],
+            function(err,result){
+                if(err){
+                    reject(err)
+                }else{
+                    resolve()
+                }
+            }
+        )
+    })
+} */
+
 module.exports={
     getAllPersons,
-    addNewPersons
+    addNewPersons//,
+    //deletePersons
 }

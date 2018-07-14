@@ -5,18 +5,46 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Document</title>
+    <style>
+        .button {
+            background-color: #4CAF50; /* Green */
+            border: none;
+            color: white;
+            padding: 16px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            transition-duration: 0.4s;
+            cursor: pointer;
+        }
+        .button2 {
+            background-color: white; 
+            color: black; 
+            border: 2px solid #008CBA;
+        }
+        
+        .button2:hover {
+            background-color: #008CBA;
+            color: white;
+        }
+        
+    </style>
     <script src="jquery-3.3.1.js"></script>
     <script src='script.js'></script>
+    
 </head>
 <body>
     <h1>ADD PERSON DETAILS</h1>
     <input id='name' type='text' name="name" placeholder="Name"><br>
     <input id='age' type='number' name='age' placeholder="Age"><br>
-    <input id="city" type="text" name="city" placeholder="City"><br>
-    <input id="submit" type="submit">
-
+    <input id="city" type="text" name="city" placeholder="City"><br><br>
+    <input class='button button2' id="submit" type="submit">
+    
     <table id="persons" border="1" cellspacing="10" cellpadding='10'>
         <tr>
+            <th>ID</th>
             <th>Name</th>
             <th>Age</th>
             <th>City</th>
@@ -25,7 +53,15 @@
             <td></td>
             <td></td>
             <td></td>
+            <td></td>
         </tr>
     </table>
+
+    <br>
+    <br>
+
+    <input id='id' type="number" name="id" placeholder="ID">
+
+    <button class="button button2" id="delbtn">Delete</button>
 </body>
 </html>

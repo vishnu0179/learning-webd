@@ -23,7 +23,13 @@ route.post('/persons/', (req, res) => {
         .catch((err) => res.send({error: err}))
 
 })
-
+/* 
+route.delete('/persons',(req,res)=>{
+    db.deletePersons(req.body.id)
+        .then(()=>res.redirect('/api/persons'))
+        .catch((err)=>res.send({error:err}))
+})
+ */
 
 exports = module.exports = {
     route
