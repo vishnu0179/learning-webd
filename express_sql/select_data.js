@@ -9,7 +9,7 @@ const connection = mysql.createConnection({
 
 connection.query(
     'SELECT * FROM persons',
-    function(err,results,fields){
+    function(err,results,fields){                        // results is rows, fields is columns
         if(err){
             console.error(err)
         }else{
